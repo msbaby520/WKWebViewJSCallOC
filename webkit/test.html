@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试页面</title>
+</head>
+<body>
+
+    <button onclick="back()">返回</button>
+    
+</body>
+<script>
+    function back(){
+        
+        // ❤️❤️❤️window.webkit.messageHandlers.方法名.postMessage(参数);
+        // 注意：参数不能为空，有且只有一个参数，如不传参数写postMessage(null)
+        
+        
+        /*
+         // 传null
+         window.webkit.messageHandlers.方法名.postMessage(null);
+         // 传字典
+         window.webkit.messageHandlers.方法名.postMessage({name:'小明',gender:'男'});
+         // 传字符串
+         window.webkit.messageHandlers.方法名.postMessage('hello');
+         // 传数组
+         window.webkit.messageHandlers.方法名.postMessage(['小明','小华','小亮']);
+        */
+
+
+        window.webkit.messageHandlers.backClick.postMessage(null);
+    }
+</script>
+</html>
